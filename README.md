@@ -183,3 +183,215 @@ FROM `reflecting-poet-391612.project.imdb-movies`
 where gross is not null
 group by Released_Year
 order by Released_Year desc;
+
+-- WHICH GENRE GENERATE THE MOST HIGHEST REVENUE
+
+select sum(total_gross) action
+
+
+from (SELECT 
+  Genre, SUM(Gross) total_gross
+
+FROM `reflecting-poet-391612.project.imdb-movies`
+where gross is not null and Genre like "%Action%"
+group by Genre);
+
+select sum(total_gross) adventure
+
+
+from (SELECT 
+  Genre, SUM(Gross) total_gross
+
+FROM `reflecting-poet-391612.project.imdb-movies`
+where gross is not null and Genre like "%Adventure%"
+group by Genre);
+
+select sum(total_gross) animation
+
+
+from (SELECT 
+  Genre, SUM(Gross) total_gross
+
+FROM `reflecting-poet-391612.project.imdb-movies`
+where gross is not null and Genre like "%Animation%"
+group by Genre);
+
+select sum(total_gross) biography
+
+
+from (SELECT 
+  Genre, SUM(Gross) total_gross
+
+FROM `reflecting-poet-391612.project.imdb-movies`
+where gross is not null and Genre like "%Biography%"
+group by Genre);
+
+select sum(total_gross) comedy
+
+
+from (SELECT 
+  Genre, SUM(Gross) total_gross
+
+FROM `reflecting-poet-391612.project.imdb-movies`
+where gross is not null and Genre like "%Comedy%"
+group by Genre);
+
+select sum(total_gross) crime
+
+
+from (SELECT 
+  Genre, SUM(Gross) total_gross
+
+FROM `reflecting-poet-391612.project.imdb-movies`
+where gross is not null and Genre like "%Crime%"
+group by Genre);
+
+select sum(total_gross) drama
+
+
+from (SELECT 
+  Genre, SUM(Gross) total_gross
+
+FROM `reflecting-poet-391612.project.imdb-movies`
+where gross is not null and Genre like "%Drama%"
+group by Genre);
+
+select sum(total_gross) family
+
+
+from (SELECT 
+  Genre, SUM(Gross) total_gross
+
+FROM `reflecting-poet-391612.project.imdb-movies`
+where gross is not null and Genre like "%Family%"
+group by Genre);
+
+select sum(total_gross) fantasy
+
+
+from (SELECT 
+  Genre, SUM(Gross) total_gross
+
+FROM `reflecting-poet-391612.project.imdb-movies`
+where gross is not null and Genre like "%Fantasy%"
+group by Genre);
+
+select sum(total_gross) filmnoir
+
+
+from (SELECT 
+  Genre, SUM(Gross) total_gross
+
+FROM `reflecting-poet-391612.project.imdb-movies`
+where gross is not null and Genre like "%Film-Noir%"
+group by Genre);
+
+select sum(total_gross) history
+
+
+from (SELECT 
+  Genre, SUM(Gross) total_gross
+
+FROM `reflecting-poet-391612.project.imdb-movies`
+where gross is not null and Genre like "%History%"
+group by Genre);
+
+select sum(total_gross) horror
+
+
+from (SELECT 
+  Genre, SUM(Gross) total_gross
+
+FROM `reflecting-poet-391612.project.imdb-movies`
+where gross is not null and Genre like "%Horror%"
+group by Genre);
+
+select sum(total_gross) music
+
+
+from (SELECT 
+  Genre, SUM(Gross) total_gross
+
+FROM `reflecting-poet-391612.project.imdb-movies`
+where gross is not null and Genre like "%Music%"
+group by Genre);
+
+select sum(total_gross) musical
+
+
+from (SELECT 
+  Genre, SUM(Gross) total_gross
+
+FROM `reflecting-poet-391612.project.imdb-movies`
+where gross is not null and Genre like "%Musical%"
+group by Genre);
+
+select sum(total_gross) mystery
+
+
+from (SELECT 
+  Genre, SUM(Gross) total_gross
+
+FROM `reflecting-poet-391612.project.imdb-movies`
+where gross is not null and Genre like "%Mystery%"
+group by Genre);
+
+select sum(total_gross) romance
+
+
+from (SELECT 
+  Genre, SUM(Gross) total_gross
+
+FROM `reflecting-poet-391612.project.imdb-movies`
+where gross is not null and Genre like "%Romance%"
+group by Genre);
+
+select sum(total_gross) scifi
+
+
+from (SELECT 
+  Genre, SUM(Gross) total_gross
+
+FROM `reflecting-poet-391612.project.imdb-movies`
+where gross is not null and Genre like "%Sci-Fi%"
+group by Genre);
+
+select sum(total_gross) sport
+
+
+from (SELECT 
+  Genre, SUM(Gross) total_gross
+
+FROM `reflecting-poet-391612.project.imdb-movies`
+where gross is not null and Genre like "%Sport%"
+group by Genre);
+
+select sum(total_gross) thriller
+
+
+from (SELECT 
+  Genre, SUM(Gross) total_gross
+
+FROM `reflecting-poet-391612.project.imdb-movies`
+where gross is not null and Genre like "%Thriller%"
+group by Genre);
+
+select sum(total_gross) war
+
+
+from (SELECT 
+  Genre, SUM(Gross) total_gross
+
+FROM `reflecting-poet-391612.project.imdb-movies`
+where gross is not null and Genre like "%War%"
+group by Genre);
+
+select sum(total_gross) western
+
+
+from (SELECT 
+  Genre, SUM(Gross) total_gross
+
+FROM `reflecting-poet-391612.project.imdb-movies`
+where gross is not null and Genre like "%Western%"
+group by Genre);
