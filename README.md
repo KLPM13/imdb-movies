@@ -418,4 +418,26 @@ from
 group by star
 order by star_total_gross desc;
 
+-- which among all star have the highest rating
+
+select
+  star,
+  avg(IMDB_Rating) as star_rating
+from  
+  (select
+    Star1 as star, IMDB_Rating  FROM `reflecting-poet-391612.project.imdb-movies`
+    union all
+   select
+    Star2 as star, IMDB_Rating  FROM `reflecting-poet-391612.project.imdb-movies`
+    union all
+   select 
+    Star3 as star, IMDB_Rating FROM `reflecting-poet-391612.project.imdb-movies`
+    union all
+   select
+    Star4 as star, IMDB_Rating FROM `reflecting-poet-391612.project.imdb-movies`
+    ) stars_gross
+
+group by star
+order by star_rating desc;
+
 
