@@ -395,3 +395,27 @@ from (SELECT
 FROM `reflecting-poet-391612.project.imdb-movies`
 where gross is not null and Genre like "%Western%"
 group by Genre);
+
+-- which among all star generated the most revenue
+
+select
+  star,
+  sum(Gross) as star_total_gross
+from  
+  (select
+    Star1 as star, Gross FROM `reflecting-poet-391612.project.imdb-movies`
+    union all
+   select
+    Star2 as star, Gross FROM `reflecting-poet-391612.project.imdb-movies`
+    union all
+   select 
+    Star3 as star, Gross FROM `reflecting-poet-391612.project.imdb-movies`
+    union all
+   select
+    Star4 as star, Gross FROM `reflecting-poet-391612.project.imdb-movies`
+    ) stars_gross
+
+group by star
+order by star_total_gross desc;
+
+
