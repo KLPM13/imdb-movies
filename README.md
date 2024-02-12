@@ -1,4 +1,4 @@
--- average rating for each genre
+**-- average rating for each genre**
 
 SELECT 
  avg(avg_rating) avg_fantasy_rating
@@ -167,7 +167,7 @@ FROM (select
       where Genre like "%Film-Noir%" 
       group by Genre);
 
--- highest rating for movie director
+**-- highest rating for movie director**
 
 SELECT 
   Director, 
@@ -175,6 +175,8 @@ SELECT
 FROM `reflecting-poet-391612.project.imdb-movies` 
 group by Director
 order by director_rating desc;
+
+**--Total sales by year**
 
 update imdb-movies set Released_year = "1995" where Released_year = "PG" ;
 
@@ -184,7 +186,7 @@ where gross is not null
 group by Released_Year
 order by Released_Year desc;
 
--- WHICH GENRE GENERATE THE MOST HIGHEST REVENUE
+**-- WHICH GENRE GENERATE THE MOST HIGHEST REVENUE**
 
 select sum(total_gross) action
 
@@ -396,7 +398,7 @@ FROM `reflecting-poet-391612.project.imdb-movies`
 where gross is not null and Genre like "%Western%"
 group by Genre);
 
--- which among all star generated the most revenue
+**-- which among all star generated the most revenue**
 
 select
   star,
@@ -418,7 +420,7 @@ from
 group by star
 order by star_total_gross desc;
 
--- which among all star have the highest rating
+**-- which among all star have the highest rating**
 
 select
   star,
